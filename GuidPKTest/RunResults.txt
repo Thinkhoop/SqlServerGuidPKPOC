@@ -1,0 +1,50 @@
+Created tables
+    Executed insert 0 in 31661ms // for whatever reason first insert is slow
+    Executed insert 1 in 698ms
+    Executed insert 2 in 508ms
+    Executed insert 3 in 513ms
+    Executed insert 4 in 492ms
+    Executed insert 5 in 492ms
+    Executed insert 6 in 485ms
+    Executed insert 7 in 505ms
+    Executed insert 8 in 518ms
+    Executed insert 9 in 512ms
+Stored 10k in 3639ms per 10k
+TestTables_ExtraGuid
+    Executed insert 0 in 28357ms
+    Executed insert 1 in 598ms
+    Executed insert 2 in 623ms
+    Executed insert 3 in 626ms
+    Executed insert 4 in 574ms
+    Executed insert 5 in 598ms
+    Executed insert 6 in 717ms
+    Executed insert 7 in 588ms
+    Executed insert 8 in 596ms
+    Executed insert 9 in 621ms
+Stored 10k in 3390ms per 10k
+TestTables_GuidPK
+    Executed insert 0 in 34033ms
+    Executed insert 1 in 40174ms
+    Executed insert 2 in 34254ms
+    Executed insert 3 in 39255ms
+    Executed insert 4 in 39869ms
+    Executed insert 5 in 37542ms
+    Executed insert 6 in 40429ms
+    Executed insert 7 in 35640ms
+    Executed insert 8 in 35508ms
+    Executed insert 9 in 36097ms
+Stored 10k in 37280ms per 10k
+TestTables_GuidPK_ClusterId
+    Executed insert 0 in 36896ms
+    Executed insert 1 in 37931ms
+    Executed insert 2 in 38281ms
+    Executed insert 3 in 39116ms
+    Executed insert 4 in 37262ms
+    Executed insert 5 in 38570ms
+    Executed insert 6 in 37769ms
+    Executed insert 7 in 37830ms
+    Executed insert 8 in 37778ms
+    Executed insert 9 in 37870ms
+Stored 10k in 37931ms per 10k
+Done
+
