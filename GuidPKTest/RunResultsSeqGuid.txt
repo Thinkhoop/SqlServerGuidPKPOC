@@ -1,0 +1,49 @@
+Created tables
+    Executed insert 0 in 33087ms
+    Executed insert 1 in 606ms
+    Executed insert 2 in 860ms
+    Executed insert 3 in 508ms
+    Executed insert 4 in 495ms
+    Executed insert 5 in 518ms
+    Executed insert 6 in 535ms
+    Executed insert 7 in 517ms
+    Executed insert 8 in 518ms
+    Executed insert 9 in 488ms
+Stored 10k in 3813ms per 10k
+TestTables_ExtraGuid
+    Executed insert 0 in 28887ms
+    Executed insert 1 in 662ms
+    Executed insert 2 in 675ms
+    Executed insert 3 in 601ms
+    Executed insert 4 in 639ms
+    Executed insert 5 in 631ms
+    Executed insert 6 in 646ms
+    Executed insert 7 in 646ms
+    Executed insert 8 in 555ms
+    Executed insert 9 in 563ms
+Stored 10k in 3450ms per 10k
+TestTables_GuidPK
+    Executed insert 0 in 35710ms
+    Executed insert 1 in 36629ms
+    Executed insert 2 in 34531ms
+    Executed insert 3 in 37315ms
+    Executed insert 4 in 36172ms
+    Executed insert 5 in 37653ms
+    Executed insert 6 in 37728ms
+    Executed insert 7 in 39382ms
+    Executed insert 8 in 39662ms
+    Executed insert 9 in 36849ms
+Stored 10k in 37163ms per 10k
+TestTables_GuidPK_ClusterId
+    Executed insert 0 in 38528ms
+    Executed insert 1 in 40386ms
+    Executed insert 2 in 38866ms
+    Executed insert 3 in 40023ms
+    Executed insert 4 in 41194ms
+    Executed insert 5 in 41882ms
+    Executed insert 6 in 38826ms
+    Executed insert 7 in 41283ms
+    Executed insert 8 in 41814ms
+    Executed insert 9 in 41832ms
+Stored 10k in 40463ms per 10k
+Done

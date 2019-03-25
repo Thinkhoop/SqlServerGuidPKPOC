@@ -7,7 +7,7 @@ namespace GuidPKTest
     {
         static void Main(string[] args)
         {
-            var connString = "Server=localhost;Database=POC;User Id=user;Password=<password>;";
+            var connString = "Server=localhost;Database=POC;User Id=user;Password=jlYMDhbaBNBjJVLc13OA;";
 
             TestTable<int>.CreateTableWithGuidPK(connString);
             TestTable<int>.CreateTableWithIntIdentityPK(connString);

@@ -1,6 +1,7 @@
 ﻿using FizzWare.NBuilder;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace GuidPKTest.Models
 {
@@ -23,7 +24,7 @@ namespace GuidPKTest.Models
         {
             return Builder<TestTable<Guid>>.CreateListOfSize(listSize)
                 .All()
-                .With(x => x.Id = RT.Comb.Provider.Sql.Create()) // sequential... unless this is a bad implementation
+                .With(x => x.Id = NewSequentialId())
                 .With(x => x.Prop_d1 = DateTimeOffset.Now)
                 .With(x => x.Prop_d2 = DateTimeOffset.Now)
                 .With(x => x.Prop_d3 = DateTimeOffset.Now)
@@ -39,7 +40,7 @@ namespace GuidPKTest.Models
                .With(x => x.Prop_d2 = DateTimeOffset.Now)
                .With(x => x.Prop_d3 = DateTimeOffset.Now)
                .With(x => x.ClusterId = 0)
-               .With(x => x.Id = Guid.NewGuid()) // shouldn't matter if this is sequential or not?
+               .With(x => x.Id = NewSequentialId())
            .Build()
            .ToArray();
         }
@@ -55,6 +56,36 @@ namespace GuidPKTest.Models
                .With(x => x.ExtraGuid = Guid.NewGuid())
            .Build()
            .ToArray();
+        }
+
+
+
+        [DllImport("rpcrt4.dll", SetLastError = true)]
+        static extern int UuidCreateSequential(out Guid guid);
+
+        private static Guid NewSequentialId()
+        {
+            Guid guid;
+            UuidCreateSequential(out guid);
+            var s = guid.ToByteArray();
+            var t = new byte[16];
+            t[3] = s[0];
+            t[2] = s[1];
+            t[1] = s[2];
+            t[0] = s[3];
+            t[5] = s[4];
+            t[4] = s[5];
+            t[7] = s[6];
+            t[6] = s[7];
+            t[8] = s[8];
+            t[9] = s[9];
+            t[10] = s[10];
+            t[11] = s[11];
+            t[12] = s[12];
+            t[13] = s[13];
+            t[14] = s[14];
+            t[15] = s[15];
+            return new Guid(t);
         }
     }
 }
